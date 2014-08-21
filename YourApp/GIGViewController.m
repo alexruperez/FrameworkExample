@@ -8,6 +8,8 @@
 
 #import "GIGViewController.h"
 
+#import <YourFramework/YourFramework.h>
+
 @interface GIGViewController ()
 
 @end
@@ -18,6 +20,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    if (YourClass.isYourFrameworkWorking)
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Well done!" message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
 }
 
 - (void)didReceiveMemoryWarning

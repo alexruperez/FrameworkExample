@@ -21,6 +21,7 @@
 		D5E2A41A19A60840004AB4D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A3FC19A60840004AB4D0 /* UIKit.framework */; };
 		D5E2A42219A60840004AB4D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5E2A42019A60840004AB4D0 /* InfoPlist.strings */; };
 		D5E2A42419A60840004AB4D0 /* YourAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E2A42319A60840004AB4D0 /* YourAppTests.m */; };
+		D5E2A43619A608B1004AB4D0 /* libYourFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A43319A6088C004AB4D0 /* libYourFramework.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D5E2A3F419A60840004AB4D0;
 			remoteInfo = YourApp;
+		};
+		D5E2A43219A6088C004AB4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5E2A3B719A60608004AB4D0;
+			remoteInfo = YourFramework;
+		};
+		D5E2A43419A6089F004AB4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D5E2A3E319A60755004AB4D0;
+			remoteInfo = Universal;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +68,7 @@
 		D5E2A41F19A60840004AB4D0 /* YourAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YourAppTests-Info.plist"; sourceTree = "<group>"; };
 		D5E2A42119A60840004AB4D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5E2A42319A60840004AB4D0 /* YourAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YourAppTests.m; sourceTree = "<group>"; };
+		D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YourFramework.xcodeproj; path = YourFramework/YourFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E2A43619A608B1004AB4D0 /* libYourFramework.a in Frameworks */,
 				D5E2A3FB19A60840004AB4D0 /* CoreGraphics.framework in Frameworks */,
 				D5E2A3FD19A60840004AB4D0 /* UIKit.framework in Frameworks */,
 				D5E2A3F919A60840004AB4D0 /* Foundation.framework in Frameworks */,
@@ -101,6 +118,7 @@
 		D5E2A3F719A60840004AB4D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */,
 				D5E2A3F819A60840004AB4D0 /* Foundation.framework */,
 				D5E2A3FA19A60840004AB4D0 /* CoreGraphics.framework */,
 				D5E2A3FC19A60840004AB4D0 /* UIKit.framework */,
@@ -152,6 +170,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D5E2A42E19A6088C004AB4D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5E2A43319A6088C004AB4D0 /* libYourFramework.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +192,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D5E2A43519A6089F004AB4D0 /* PBXTargetDependency */,
 			);
 			name = YourApp;
 			productName = YourApp;
@@ -216,6 +243,12 @@
 			mainGroup = D5E2A3EC19A60840004AB4D0;
 			productRefGroup = D5E2A3F619A60840004AB4D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D5E2A42E19A6088C004AB4D0 /* Products */;
+					ProjectRef = D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D5E2A3F419A60840004AB4D0 /* YourApp */,
@@ -223,6 +256,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D5E2A43319A6088C004AB4D0 /* libYourFramework.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYourFramework.a;
+			remoteRef = D5E2A43219A6088C004AB4D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D5E2A3F319A60840004AB4D0 /* Resources */ = {
@@ -271,6 +314,11 @@
 			isa = PBXTargetDependency;
 			target = D5E2A3F419A60840004AB4D0 /* YourApp */;
 			targetProxy = D5E2A41B19A60840004AB4D0 /* PBXContainerItemProxy */;
+		};
+		D5E2A43519A6089F004AB4D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Universal;
+			targetProxy = D5E2A43419A6089F004AB4D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
