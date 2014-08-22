@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D567C28D19A74ADA00CE887D /* YourFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D567C28B19A748A500CE887D /* YourFramework.bundle */; };
 		D5E2A3F919A60840004AB4D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A3F819A60840004AB4D0 /* Foundation.framework */; };
 		D5E2A3FB19A60840004AB4D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A3FA19A60840004AB4D0 /* CoreGraphics.framework */; };
 		D5E2A3FD19A60840004AB4D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A3FC19A60840004AB4D0 /* UIKit.framework */; };
@@ -25,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D567C28A19A748A500CE887D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5E2A42D19A6088C004AB4D0 /* YourFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D567C27519A7435700CE887D;
+			remoteInfo = Resources;
+		};
 		D5E2A41B19A60840004AB4D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5E2A3ED19A60840004AB4D0 /* Project object */;
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E2A43319A6088C004AB4D0 /* libYourFramework.a */,
+				D567C28B19A748A500CE887D /* YourFramework.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +267,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		D567C28B19A748A500CE887D /* YourFramework.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = YourFramework.bundle;
+			remoteRef = D567C28A19A748A500CE887D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D5E2A43319A6088C004AB4D0 /* libYourFramework.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -275,6 +291,7 @@
 				D5E2A41119A60840004AB4D0 /* Images.xcassets in Resources */,
 				D5E2A40319A60840004AB4D0 /* InfoPlist.strings in Resources */,
 				D5E2A40C19A60840004AB4D0 /* Main.storyboard in Resources */,
+				D567C28D19A74ADA00CE887D /* YourFramework.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +524,7 @@
 				D5E2A42919A60840004AB4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5E2A42A19A60840004AB4D0 /* Build configuration list for PBXNativeTarget "YourAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +533,7 @@
 				D5E2A42C19A60840004AB4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

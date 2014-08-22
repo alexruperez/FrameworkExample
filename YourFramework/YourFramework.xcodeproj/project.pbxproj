@@ -15,6 +15,7 @@
 				D5E2A3EB19A607FA004AB4D0 /* Build Documentation */,
 			);
 			dependencies = (
+				D567C28519A7451C00CE887D /* PBXTargetDependency */,
 				D5E2A3E819A60760004AB4D0 /* PBXTargetDependency */,
 			);
 			name = Universal;
@@ -25,6 +26,8 @@
 /* Begin PBXBuildFile section */
 		D567C26E19A73A5000CE887D /* YourPrivateClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D567C26C19A73A5000CE887D /* YourPrivateClass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D567C26F19A73A5000CE887D /* YourPrivateClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D567C26D19A73A5000CE887D /* YourPrivateClass.m */; };
+		D567C27719A7435700CE887D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D567C27619A7435700CE887D /* CoreFoundation.framework */; };
+		D567C28319A744CC00CE887D /* Resource.png in Resources */ = {isa = PBXBuildFile; fileRef = D567C28219A744CC00CE887D /* Resource.png */; };
 		D5E2A3BB19A60608004AB4D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E2A3BA19A60608004AB4D0 /* Foundation.framework */; };
 		D5E2A3C019A60608004AB4D0 /* YourFramework.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5E2A3BF19A60608004AB4D0 /* YourFramework.h */; };
 		D5E2A3E119A6064C004AB4D0 /* YourFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E2A3BF19A60608004AB4D0 /* YourFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D567C28419A7451C00CE887D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5E2A3AF19A60608004AB4D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D567C27419A7435700CE887D;
+			remoteInfo = Resources;
+		};
 		D5E2A3E719A60760004AB4D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5E2A3AF19A60608004AB4D0 /* Project object */;
@@ -58,6 +68,11 @@
 /* Begin PBXFileReference section */
 		D567C26C19A73A5000CE887D /* YourPrivateClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourPrivateClass.h; sourceTree = "<group>"; };
 		D567C26D19A73A5000CE887D /* YourPrivateClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourPrivateClass.m; sourceTree = "<group>"; };
+		D567C27519A7435700CE887D /* YourFramework.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourFramework.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D567C27619A7435700CE887D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D567C27A19A7435700CE887D /* Resources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Resources-Info.plist"; sourceTree = "<group>"; };
+		D567C27E19A7435700CE887D /* Resources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resources-Prefix.pch"; sourceTree = "<group>"; };
+		D567C28219A744CC00CE887D /* Resource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Resource.png; sourceTree = "<group>"; };
 		D5E2A3B719A60608004AB4D0 /* libYourFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYourFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E2A3BA19A60608004AB4D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5E2A3BE19A60608004AB4D0 /* YourFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourFramework-Prefix.pch"; sourceTree = "<group>"; };
@@ -69,6 +84,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D567C27219A7435700CE887D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D567C27719A7435700CE887D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5E2A3B419A60608004AB4D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,10 +112,29 @@
 			path = Private;
 			sourceTree = "<group>";
 		};
+		D567C27819A7435700CE887D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D567C28219A744CC00CE887D /* Resource.png */,
+				D567C27919A7435700CE887D /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D567C27919A7435700CE887D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D567C27A19A7435700CE887D /* Resources-Info.plist */,
+				D567C27E19A7435700CE887D /* Resources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D5E2A3AE19A60608004AB4D0 = {
 			isa = PBXGroup;
 			children = (
 				D5E2A3BC19A60608004AB4D0 /* YourFramework */,
+				D567C27819A7435700CE887D /* Resources */,
 				D5E2A3B919A60608004AB4D0 /* Frameworks */,
 				D5E2A3B819A60608004AB4D0 /* Products */,
 			);
@@ -102,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E2A3B719A60608004AB4D0 /* libYourFramework.a */,
+				D567C27519A7435700CE887D /* YourFramework.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +155,7 @@
 				D5E2A3BA19A60608004AB4D0 /* Foundation.framework */,
 				D5E2A3C819A60608004AB4D0 /* XCTest.framework */,
 				D5E2A3CB19A60608004AB4D0 /* UIKit.framework */,
+				D567C27619A7435700CE887D /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +196,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D567C27419A7435700CE887D /* Resources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D567C27F19A7435700CE887D /* Build configuration list for PBXNativeTarget "Resources" */;
+			buildPhases = (
+				D567C27119A7435700CE887D /* Sources */,
+				D567C27219A7435700CE887D /* Frameworks */,
+				D567C27319A7435700CE887D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resources;
+			productName = Resources;
+			productReference = D567C27519A7435700CE887D /* YourFramework.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D5E2A3B619A60608004AB4D0 /* YourFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5E2A3DA19A60608004AB4D0 /* Build configuration list for PBXNativeTarget "YourFramework" */;
@@ -194,9 +255,21 @@
 			targets = (
 				D5E2A3B619A60608004AB4D0 /* YourFramework */,
 				D5E2A3E319A60755004AB4D0 /* Universal */,
+				D567C27419A7435700CE887D /* Resources */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D567C27319A7435700CE887D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D567C28319A744CC00CE887D /* Resource.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		D5E2A3E219A60730004AB4D0 /* Prepare Framework */ = {
@@ -225,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\nrm -rf \"${PROJECT_DIR}/Framework/\"\nmkdir \"${PROJECT_DIR}/Framework/\"\ncp -rf \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}\" \"${PROJECT_DIR}/Framework/\"";
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\nSF_BUNDLE_NAME=\"${SF_TARGET_NAME}.bundle\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\nrm -rf \"${PROJECT_DIR}/Framework/\"\nmkdir \"${PROJECT_DIR}/Framework/\"\ncp -rf \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}\" \"${PROJECT_DIR}/Framework/\"\ncp -rf \"${BUILT_PRODUCTS_DIR}/${SF_BUNDLE_NAME}\" \"${PROJECT_DIR}/Framework/\" 2>/dev/null || :";
 		};
 		D5E2A3EB19A607FA004AB4D0 /* Build Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -244,6 +317,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D567C27119A7435700CE887D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5E2A3B319A60608004AB4D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +336,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D567C28519A7451C00CE887D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D567C27419A7435700CE887D /* Resources */;
+			targetProxy = D567C28419A7451C00CE887D /* PBXContainerItemProxy */;
+		};
 		D5E2A3E819A60760004AB4D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D5E2A3B619A60608004AB4D0 /* YourFramework */;
@@ -264,6 +349,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D567C28019A7435700CE887D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Resources/Resources-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Resources/Resources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = YourFramework;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D567C28119A7435700CE887D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Resources/Resources-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Resources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = YourFramework;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		D5E2A3D819A60608004AB4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +510,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D567C27F19A7435700CE887D /* Build configuration list for PBXNativeTarget "Resources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D567C28019A7435700CE887D /* Debug */,
+				D567C28119A7435700CE887D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5E2A3B219A60608004AB4D0 /* Build configuration list for PBXProject "YourFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

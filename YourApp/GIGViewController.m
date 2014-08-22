@@ -25,6 +25,11 @@
     {
         [[[UIAlertView alloc] initWithTitle:@"Well done!" message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
+
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    NSBundle *frameworkBundle = [NSBundle bundleWithPath:[[NSBundle.mainBundle resourcePath] stringByAppendingPathComponent:@"YourFramework.bundle"]];
+    imageView.image = [UIImage imageWithContentsOfFile:[frameworkBundle pathForResource:@"Resource" ofType:@"png"]];
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning
